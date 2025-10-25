@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | Paskibra SMK Telkom Makassar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo">Muh.Khairan</a>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="Goals.html" class="active">Goals</a>
+      <a href="skills.html">Skills</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+<section class="services" id="services">
+  <h2 class="heading">Our <span>Goals</span></h2>
+
+  <div class="services-container">
+    <div class="service-box animate">
+      <h3>Pelatihan Baris Berbaris</h3>
+      <p>Menumbuhkan kedisiplinan dan kebersamaan anggota melalui latihan intensif.</p>
+    </div>
+
+    <div class="service-box animate">
+      <h3>Leadership Training</h3>
+      <p>Mengasah kemampuan kepemimpinan dan tanggung jawab dalam setiap kegiatan.</p>
+    </div>
+
+    <div class="service-box animate">
+      <h3>Event Nasional</h3>
+      <p>Berpartisipasi dalam berbagai lomba dan kegiatan paskibra tingkat nasional.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+  const boxes = document.querySelectorAll('.service-box');
+
+  const showElements = () => {
+    boxes.forEach((box, index) => {
+      setTimeout(() => {
+        box.classList.add('show');
+      }, index * 300); // jeda antar kotak
+    });
+  };
+
+  window.addEventListener('load', showElements);
+</script>
+</body>
+</html>
+
+

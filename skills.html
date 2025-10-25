@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills | Paskibra Telkom</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== Navbar ===== -->
+  <header class="header">
+    <a href="index.html" class="logo">Muh.Khairan</a>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="Goals.html">Goals</a>
+      <a href="skills.html" class="active">Skills</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ===== Skills Section ===== -->
+  <section class="skills" id="skills">
+    <h2 class="heading">My <span>Skills</span></h2>
+
+    <div class="skills-container">
+      <div class="skill-box">
+        <h3>Disiplin</h3>
+        <div class="bar">
+          <div class="progress" data-skill="95%"></div>
+        </div>
+      </div>
+
+      <div class="skill-box">
+        <h3>Kepemimpinan</h3>
+        <div class="bar">
+          <div class="progress" data-skill="90%"></div>
+        </div>
+      </div>
+
+      <div class="skill-box">
+        <h3>Kerja Sama Tim</h3>
+        <div class="bar">
+          <div class="progress" data-skill="85%"></div>
+        </div>
+      </div>
+
+      <div class="skill-box">
+        <h3>Ketekunan</h3>
+        <div class="bar">
+          <div class="progress" data-skill="88%"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <p>&copy; 2025 Paskibra Telkom. All Rights Reserved.</p>
+  </footer>
+
+  <!-- ===== Script (Animasi Skills) ===== -->
+  <script>
+    // Ambil semua progress bar
+    const progressBars = document.querySelectorAll('.progress');
+
+    const showProgress = () => {
+      progressBars.forEach((bar, index) => {
+        const value = bar.getAttribute('data-skill');
+        setTimeout(() => {
+          bar.style.width = value;
+          bar.classList.add('show');
+        }, index * 400); // jeda antar animasi
+      });
+    };
+
+    // Jalankan animasi setelah halaman dimuat
+    window.addEventListener('load', showProgress);
+  </script>
+
+</body>
+</html>

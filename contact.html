@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Paskibra Telkom</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== Navbar ===== -->
+  <header class="header">
+    <a href="index.html" class="logo">Muh.Khairan</a>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="Goals.html">Goals</a>
+      <a href="skills.html">Skills</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ===== Contact Section ===== -->
+  <section class="contact" id="contact">
+    <h2 class="heading">Get in <span>Touch</span></h2>
+
+    <div class="contact-container">
+      <div class="contact-info animate">
+        <h3>Hubungi Kami</h3>
+        <p>Ingin tahu lebih lanjut tentang kegiatan Paskibra SMK Telkom Makassar atau ingin bekerja sama? Jangan ragu untuk menghubungi kami melalui form di samping.</p>
+        <ul>
+          <li><strong>Instagram:</strong> @pastelkmakassar</li>
+          <li><strong>Alamat:</strong> JL. A. P. Pettarani no 4</li>
+        </ul>
+      </div>
+
+      <form class="contact-form animate">
+        <input type="text" placeholder="Nama Lengkap" required />
+        <input type="email" placeholder="Alamat Email" required />
+        <textarea placeholder="Pesan Anda..." required></textarea>
+        <button type="submit" class="btn">Kirim Pesan</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <p>&copy; 2025 Paskibra Telkom. All Rights Reserved.</p>
+  </footer>
+
+  <!-- ===== Script (Animasi Contact) ===== -->
+  <script>
+    const elements = document.querySelectorAll('.animate');
+
+    const showElements = () => {
+      elements.forEach((el, index) => {
+        setTimeout(() => {
+          el.classList.add('show');
+        }, index * 400);
+      });
+    };
+
+    window.addEventListener('load', showElements);
+  </script>
+
+</body>
+</html>
